@@ -241,6 +241,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				]
 			});
 
+			//reset data ketika hide modal
+			$(".modal").on("hide.bs.modal", () => {
+				form_tambah[0].reset();
+				form_tambah[0].reset();
+			});
+
 			//submit data baru
 			form_tambah.on("submit", (event) => {
 				event.preventDefault();
